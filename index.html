@@ -179,7 +179,7 @@ document.getElementById('sendLocationButton').addEventListener('click', async fu
 });
 
 function sendLocationToServer(locationObject) {
-    fetch('http://localhost:3000/home/teacher', {
+    fetch('https://hostwithoutcamera-2.onrender.com/home/teacher', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
