@@ -14,6 +14,11 @@ const socketIo = require('socket.io');
 app.use(express.json());
 
 
+app.use((req, res, next) => {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    next();
+});
+
 app.get('/home', (req, res)=>{
     res.sendFile(__dirname + '/homePage.html');
 })
